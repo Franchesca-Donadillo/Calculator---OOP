@@ -2,5 +2,10 @@
 # BSCPE 1-5
 
 # create class Calculator
-# define compute operations
-# use if else 
+class Calculator:
+    # define compute operations
+    def use_operation(self, operation, num_1, num_2):
+        if operation == "ADDITION":
+            sum = num_1 + num_2
+            return sum
+    # use if else 
