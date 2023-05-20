@@ -13,7 +13,7 @@ class UserInterface:
 
     # Get user's mathematical operation
     def math_operation(self):
-        operation = input("Enter the mathematical operation you want to perform: ")
+        operation = input("Enter the mathematical operation you want to perform: ").upper()
         return operation
     
     # Define function user_input
