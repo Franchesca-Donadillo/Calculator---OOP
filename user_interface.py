@@ -37,11 +37,11 @@ class UserInterface:
     def display_quo(self, quo):
         print("The quotient of the numbers is " + str(quo))
 
-    def user_repeat(self):
+    def user_repeat(self, main):
         repeat = input("Do you want to repeat? yes/no: ")
 
         if repeat == "yes":
-            print()
+            main()
 
         elif repeat == "no":
             print("THANK YOU!")
