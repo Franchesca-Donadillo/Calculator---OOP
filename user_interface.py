@@ -18,12 +18,21 @@ class UserInterface:
     
     # Define function user_input
     def user_input(self):
-        num = float(input("Enter first number: "))
+        num = float(input("Enter number: "))
         return num
 
     # Display sum
-    def display_sum(self, add):
-        print(add)
+    def display_sum(self, sum):
+        print("The sum of the numbers is " + str(sum))
+
     # Display difference
+    def display_diff(self,diff):
+        print("The difference of the numbers is " + str(diff))
+        
     # Display product
+    def display_prod(self, prod):
+        print("The product of the numbers is " + str(prod))
+
     # Display quotient
+    def display_quo(self, quo):
+        print("The quotient of the numbers is " + str(quo))

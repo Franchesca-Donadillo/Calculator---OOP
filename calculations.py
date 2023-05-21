@@ -4,8 +4,18 @@
 # create class Calculator
 class Calculator:
     # define compute operations
-    def use_operation(self, operation, num_1, num_2):
-        if operation == "ADDITION":
-            sum = num_1 + num_2
-            return sum
-    # use if else 
+    def add(self, num_1, num_2):
+        sum = num_1 + num_2
+        return sum
+    
+    def sub(self, num_1, num_2):
+        diff = num_1 - num_2
+        return diff
+    
+    def multiply(self, num_1, num_2):
+        prod =  num_1 * num_2
+        return prod
+    
+    def div(self, num_1, num_2):
+        quo = num_1 / num_2
+        return quo
