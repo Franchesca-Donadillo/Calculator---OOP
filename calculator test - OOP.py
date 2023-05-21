@@ -1,7 +1,7 @@
 # Franchesca Marie U. Donadillo
 # BSCPE 1-5
 
-def main():
+def main(): 
     # import user interface
     from user_interface import UserInterface
 
@@ -15,7 +15,7 @@ def main():
         # Ask user for mathematical operations to be used
         user_operation = u_interface.math_operation().upper()
         
-        if user_operation != "ADDITION" and user_operation != "SUBTRACTION" and user_operation != "MULTIPLICATION" and user_operation != "DIVISION":
+        if user_operation != "ADDITION" and user_operation != "SUBTRACTION" and user_operation != "MULTIPLICATION" and user_operation != "DIVISION" and user_operation == "":
             print("Invalid. Input not recognized.\nCheck the spelling.\n")
             u_interface.user_repeat(main)
             

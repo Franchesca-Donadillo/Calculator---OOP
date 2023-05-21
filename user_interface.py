@@ -1,18 +1,23 @@
 # Franchesca Marie U. Donadillo
 # BSCPE 1-5
 
+import pyfiglet
+from termcolor import colored, cprint
+
 # Create user interface class
 class UserInterface:
     # initialize
     def __init__(self):
-        print("MATHEMATICAL OPERATIONS\n")
-        print("~ Addition")
-        print("~ Subtraction")
-        print("~ Multiplication")
-        print("~ Division\n")
+        title = pyfiglet.figlet_format("MATH OPERATIONS\n", font="cricket")
+        print(colored(title.center(55), "magenta", attrs=["bold"]))
+        cprint(colored("~ Addition"), "blue", attrs=["bold"])
+        cprint(colored("~ Subtraction"), "blue", attrs=["bold"])
+        cprint(colored("~ Multiplication"), "blue", attrs=["bold"])
+        cprint(colored("~ Division\n"), "blue", attrs=["bold"])
 
     # Get user's mathematical operation
     def math_operation(self):
+        cprint(colored("="*83),"red")
         operation = input("Enter the mathematical operation you want to perform between two numbers: ").upper()
         return operation
     
@@ -23,7 +28,7 @@ class UserInterface:
 
     # Display sum
     def display_sum(self, sum):
-        print("="*83)
+        cprint(colored("="*83), "red")
         print("The sum of the numbers is " + str(sum), "\n")
 
     # Display difference
@@ -33,16 +38,16 @@ class UserInterface:
         
     # Display product
     def display_prod(self, prod):
-        print("="*83)
+        cprint(colored("="*83), "red")
         print("The product of the numbers is " + str(prod), "\n")
 
     # Display quotient
     def display_quo(self, quo):
-        print("="*83)
+        cprint(colored("="*83), "red")
         print("The quotient of the numbers is " + str(quo), "\n")
 
     def user_repeat(self, main):
-        print("="*83)
+        cprint(colored("="*83), "red")
         repeat = input("Do you want to repeat? yes/no: ")
         print("\n")
 
@@ -55,7 +60,7 @@ class UserInterface:
 
         else:
             print("Invalid. Type yes or no only.\n")
-            print("="*83)
+            cprint(colored("="*83), "red")
             repeat = input("Do you want to repeat? yes/no: ")
             print("\n")
 
@@ -65,5 +70,7 @@ class UserInterface:
             elif repeat == "no":
                 print("THANK YOU!")
                 exit()
+
+
 
     
