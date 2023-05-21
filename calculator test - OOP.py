@@ -11,16 +11,21 @@ def main():
     u_interface = UserInterface()
     calc = Calculator()
 
-    # Ask user for two numbers
-    num_1 = float(u_interface.user_input())
-    num_2 = float(u_interface.user_input())
-
     while True:
         # Ask user for mathematical operations to be used
         user_operation = u_interface.math_operation().upper()
-
+        
+        if user_operation != "ADDITION" and user_operation != "SUBTRACTION" and user_operation != "MULTIPLICATION" and user_operation != "DIVISION":
+            print("Invalid. Input not recognized.\nCheck the spelling.\n")
+            u_interface.user_repeat(main)
+            
+       
         while True:
             try:
+                # Ask user for two numbers
+                num_1 = float(u_interface.user_input())
+                num_2 = float(u_interface.user_input())
+
                 # Perform calculations
                 if user_operation == "ADDITION":
                     sum = calc.add(num_1, num_2)
@@ -37,16 +42,16 @@ def main():
                     # Display result of multiplication
                     display_prod = u_interface.display_prod(prod)
 
-                elif u_interface == "DIVISION":
+                elif user_operation == "DIVISION":
                     quo = calc.div(num_1,num_2)
                     # Display result of division
                     display_quo = u_interface.display_quo(quo)
+            
+            except ValueError:
+                print("Invalid value. Enter numbers only.")
 
             except ZeroDivisionError:
                 print("Invalid. You are dividing by 0.")
-
-            except ValueError:
-                print("Invalid value. Enters numbers only.")
 
             finally:
                 # ask user if they want to repeat

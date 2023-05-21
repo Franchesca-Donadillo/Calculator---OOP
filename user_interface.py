@@ -39,6 +39,7 @@ class UserInterface:
 
     def user_repeat(self, main):
         repeat = input("Do you want to repeat? yes/no: ")
+        print("\n")
 
         if repeat == "yes":
             main()
