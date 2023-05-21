@@ -36,3 +36,15 @@ class UserInterface:
     # Display quotient
     def display_quo(self, quo):
         print("The quotient of the numbers is " + str(quo))
+
+    def user_repeat(self):
+        repeat = input("Do you want to repeat? yes/no: ")
+
+        if repeat == "yes":
+            print()
+
+        elif repeat == "no":
+            print("THANK YOU!")
+            exit()
+
+        return repeat
