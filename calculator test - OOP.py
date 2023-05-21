@@ -1,8 +1,10 @@
 # Franchesca Marie U. Donadillo
 # BSCPE 1-5
 
-def main(): 
+def main():
+ 
     # import user interface
+    from termcolor import colored, cprint
     from user_interface import UserInterface
 
     # import Calculator
@@ -14,11 +16,11 @@ def main():
     while True:
         # Ask user for mathematical operations to be used
         user_operation = u_interface.math_operation().upper()
-        
-        if user_operation != "ADDITION" and user_operation != "SUBTRACTION" and user_operation != "MULTIPLICATION" and user_operation != "DIVISION" and user_operation == "":
-            print("Invalid. Input not recognized.\nCheck the spelling.\n")
-            u_interface.user_repeat(main)
-            
+
+        if user_operation != "ADDITION" and user_operation != "SUBTRACTION" and user_operation != "MULTIPLICATION" and user_operation != "DIVISION" and user_operation != "":
+            cprint(colored("_"*83), "red")
+            cprint(colored("Invalid input.\nCheck your spelling"), "red", attrs=["bold"])
+            u_interface.user_repeat(main)          
        
         while True:
             try:
@@ -48,10 +50,12 @@ def main():
                     u_interface.display_quo(quo)
             
             except ValueError:
-                print("Invalid value. Enter numbers only.\n")
+                cprint(colored("_"*83), "red")
+                cprint(colored("Invalid value. Enter numbers only.\n"), "red", attrs=["bold"])
 
             except ZeroDivisionError:
-                print("Invalid. You are dividing by 0.\n")
+                cprint(colored("_"*83), "red")
+                cprint(colored("Invalid. You are dividing by 0.\n"), "red", attrs=["bold"])
 
             finally:
                 # ask user if they want to repeat
