@@ -61,6 +61,7 @@ class UserInterface:
             exit()
 
         else:
+            cprint(colored("="*83), "red")
             print("Invalid. Type yes or no only.\n")
             cprint(colored("="*83), "red")
             repeat = input("Do you want to repeat? yes/no: ")
