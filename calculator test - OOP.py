@@ -61,7 +61,7 @@ def main():
 
                 elif user_operation == "LOG" or user_operation == "6":
                     logarithm = add_ops.log(num_1, num_2)
-                    # Display result of GCD
+                    # Display result of Log
                     inherit.display_log(logarithm)
             
             except ValueError:

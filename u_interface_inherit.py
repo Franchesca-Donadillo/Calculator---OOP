@@ -30,6 +30,7 @@ class InheritInterface(UserInterface):
         operation = input("Enter either the mathematical operation or choose from 1-6 on what you want to perform between two numbers: ").upper()
         return operation
 
+    # added to the previous user input (inherited)
     def display_power(self, exp):
         cprint(colored("="*83), "green")
         cprint(colored(f"** The power of the numbers is {exp} **\n"), "cyan", attrs=["bold", "reverse"])
