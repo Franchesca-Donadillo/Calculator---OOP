@@ -6,14 +6,18 @@ from termcolor import colored, cprint
 
 # Create user interface class
 class UserInterface:
-    # initialize
-    def __init__(self):
+    
+    def design(self):
         title = pyfiglet.figlet_format("MATH OPERATIONS\n", font="cricket")
+        op_1 = "(1)"
+        op_2 = "(2)"
+        op_3 = "(3)"
+        op_4 = "(4)"
         print(colored(title.center(55), "magenta", attrs=["bold"]))
-        cprint(colored("~ Addition"), "blue", attrs=["bold"])
-        cprint(colored("~ Subtraction"), "blue", attrs=["bold"])
-        cprint(colored("~ Multiplication"), "blue", attrs=["bold"])
-        cprint(colored("~ Division\n"), "blue", attrs=["bold"])
+        cprint(colored(f"~ Addition { op_1.rjust(15)}"), "blue", attrs=["bold"])
+        cprint(colored(f"~ Subtraction {op_2.rjust(12)}"), "blue", attrs=["bold"])
+        cprint(colored(f"~ Multiplication {op_3.rjust(9)}"), "blue", attrs=["bold"])
+        cprint(colored(f"~ Division {op_4.rjust(15)}\n"), "blue", attrs=["bold"])
 
     # Get user's mathematical operation
     def math_operation(self):
