@@ -22,47 +22,47 @@ def main():
         # Ask user for mathematical operations to be used
         user_operation = inherit.math_operation().upper()
 
-        if user_operation != "ADDITION" and user_operation != "1" and user_operation != "SUBTRACTION" and user_operation != "2" and user_operation != "MULTIPLICATION" and user_operation != "3" and user_operation != "DIVISION" and user_operation != "4" and user_operation != "POWER" and user_operation != "5" and user_operation == "SQ ROOT" and user_operation == "6" and user_operation != "":
+        if user_operation != "ADDITION" and user_operation != "1" and user_operation != "SUBTRACTION" and user_operation != "2" and user_operation != "MULTIPLICATION" and user_operation != "3" and user_operation != "DIVISION" and user_operation != "4" and user_operation != "POWER" and user_operation != "5" and user_operation == "LOG" and user_operation == "6" and user_operation != "":
             cprint(colored("_"*83), "red")
             cprint(colored("Invalid input.\nCheck your spelling"), "red", attrs=["bold"])
-            u_interface.user_repeat(main)          
+            inherit.user_repeat(main)          
        
         while True:
             try:
                 # Ask user for two numbers
-                num_1 = float(u_interface.user_input(" first "))
-                num_2 = float(u_interface.user_input(" second "))
+                num_1 = float(inherit.user_input(" first "))
+                num_2 = float(inherit.user_input(" second "))
 
                 # Perform calculations
                 if user_operation == "ADDITION" or user_operation == "1":
                     sum = add_ops.add(num_1, num_2)
                     # Display resultof addition
-                    u_interface.display_sum(sum)
+                    inherit.display_sum(sum)
 
                 elif user_operation == "SUBTRACTION" or user_operation == "2":
                     diff = add_ops.sub(num_1, num_2)
                     # Display result of subtraction
-                    u_interface.display_diff(diff)
+                    inherit.display_diff(diff)
 
                 elif user_operation == "MULTIPLICATION" or user_operation == "3":
                     prod = add_ops.multiply(num_1, num_2)
                     # Display result of multiplication
-                    u_interface.display_prod(prod)
+                    inherit.display_prod(prod)
 
                 elif user_operation == "DIVISION" or user_operation == "4":
                     quo = add_ops.div(num_1,num_2)
                     # Display result of division
-                    u_interface.display_quo(quo)
+                    inherit.display_quo(quo)
 
                 elif user_operation == "EXPONENT" or user_operation == "5":
                     exp = add_ops.power(num_1, num_2)
                     # Display result of power
                     inherit.display_power(exp)
 
-                elif user_operation == "GCD" or user_operation == "6":
-                    gcd = add_ops.greatest_cd(num_1, num_2)
+                elif user_operation == "LOG" or user_operation == "6":
+                    logarithm = add_ops.log(num_1, num_2)
                     # Display result of GCD
-                    inherit.display_gcd(gcd)
+                    inherit.display_log(logarithm)
             
             except ValueError:
                 cprint(colored("_"*83), "red")
@@ -74,6 +74,6 @@ def main():
 
             finally:
                 # ask user if they want to repeat
-                u_interface.user_repeat(main)
+                inherit.user_repeat(main)
 
 main()

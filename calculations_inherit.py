@@ -9,7 +9,7 @@ class MathOps(Calculator):
         power_op = math.pow(num_1, num_2)
         return power_op
     
-    def greatest_cd(self,num_1, num_2):
-        gcd = math.gcd(num_1, num_2)
-        return gcd
+    def log(self, num_1, num_2):
+        logarithm = math.log(num_1, num_2)
+        return logarithm
 
